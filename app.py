@@ -3,12 +3,9 @@ import pandas as pd
 import plotly.express as px
 from PIL import Image
 
-
-
 st.set_page_config(page_title="Survey Report",
                    page_icon="https://img.icons8.com/emoji/48/000000/chart-increasing-with-yen-emoji.png",
                    )
-
 
 st.header('Survey Results 2021')
 st.subheader('Was the turotial helpful?')
@@ -55,21 +52,12 @@ bar_chart = px.bar(df_grouped, x='Rating', y='Votes', text='Votes',
 
 st.plotly_chart(bar_chart)
 
-col1,col2 = st.columns(2)
+col1, col2 = st.columns(2)
 image = Image.open('images/survey.jpg')
 col1.image(image, caption="Designed by slidesgo", use_column_width=True)
 col2.dataframe(df[mask])
-
-#st.dataframe(df_participants)
 
 pie_chart = px.pie(df_participants, title='Total Nro of Participants', values='Participants',
                    names='Departments')
 
 st.plotly_chart(pie_chart)
-
-
-
-# print(df['apellidos_nombre'])
-# print(df._ixs(3,0))
-# print(df.sort_values(by='volumen_cargado',ascending=False))
-# print(df[df.loc[:,4]<22000])
