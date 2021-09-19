@@ -1,5 +1,6 @@
-pandas<1.2.0
-streamlit==0.74.1
-plotly==4.14.3
-Pillow==8.1.2
+plotly==5.3.1
+streamlit==0.86.0
+pandas==1.2.5
+Pillow==8.3.2
 xlrd<2.0
+openpyxl<3.0.8
