@@ -15,7 +15,7 @@ st.subheader('Was the turotial helpful?')
 excel_file = 'Survey_Results.xlsx'
 sheet_name = 'DATA'
 
-df = pd.read_excel(excel_file, sheet_name=sheet_name,
+df = pd.read_excel(excel_file, sheet_name=sheet_name, engine="openpyxl",
                    usecols='B:D', header=3)
 df_participants = pd.read_excel(excel_file, sheet_name=sheet_name,
                                 usecols='F:G', header=3)
